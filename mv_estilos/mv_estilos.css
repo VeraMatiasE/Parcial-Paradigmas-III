@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #7f8eef;
+    --accent-color: #5d70eb;
+    --hover-color: #6978d9;
+}
+
+html, body {
+    margin: 0;
+    font-size: 16px;
+}
+
+header nav {
+    background-color: var(--primary-color);
+    border-bottom: 3px solid black;
+    padding: 5px 10px;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header nav li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+.lista-publicaciones {
+    max-width: 80%;
+    width: -webkit-fill-available;
+}
+
+.lista-publicaciones h2 {
+    text-align: center;
+}
+
+.publicacion {
+    border: 1px solid black;
+    padding: 20px 10px;
+}
+
+.publicacion a {
+    text-decoration: none;
+    color: black;
+}
+
+.formulario-sesion {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px 10px;
+    margin: 20px 0;
+}
+
+.formulario-sesion h1 {
+    text-align: center;
+}
+
+.formulario-sesion .campo {
+    padding: 10px;
+}
+
+.boton-sesion {
+    width: 100%;
+    background-color: var(--accent-color);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-sesion:hover {
+    background-color: var(--hover-color);
+}
+
+.contenido-publicacion .propiedades {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    color: gray;
+}
+
+.contenido-publicacion {
+    max-width: 90%;
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+}
+
+.lista-comentarios {
+    max-width: 70%;
+    width: -webkit-fill-available;
+}
+
+.datos-comentario {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    color: gray;
+}
+
+#insertar-comentario {
+    display: flex;
+    flex-direction: column;
+}
