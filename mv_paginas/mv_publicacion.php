@@ -32,10 +32,10 @@ session_start();
         <section class="contenido-publicacion">
             <h1><?php echo htmlspecialchars($result["titulo"]) ?></h1>
             <div class="propiedades">
-                <p><?php echo htmlspecialchars($result["fecha"]) ?></p>
-                <p><?php echo htmlspecialchars($result["username"]) ?></p>
+                <p class="fecha"><?php echo htmlspecialchars($result["fecha"]) ?></p>
+                <p class="autor"><?php echo htmlspecialchars($result["username"]) ?></p>
             </div>
-            <p><?php echo htmlspecialchars($result["contenido"]) ?></p>
+            <p class="contenido"><?php echo nl2br(htmlspecialchars($result["contenido"])) ?></p>
         </section>
         <section class="lista-comentarios">
             <h3>Comentarios</h3>
@@ -58,23 +58,21 @@ session_start();
                 ?>
                 <div class="comentario">
                     <div class="datos-comentario">
-                        <p>Usuario
-                            <?php echo !isset($result["username"]) ? "Anónimo" : htmlspecialchars($result["username"]) ?>
+                        <p class="usuario">
+                            <?php echo isset($result["username"]) ? htmlspecialchars($result["username"]) : "Anónimo"; ?>
                         </p>
-                        <?php echo $result["fecha"]; ?>
-                        <p>Fecha <?php echo htmlspecialchars($result["fecha"]) ?></p>
+                        <p class="fecha-comentario"><?php echo htmlspecialchars($result["fecha"]); ?></p>
                     </div>
-                    <p><?php echo htmlspecialchars($result["contenido"]) ?></p>
-                    </a>
+                    <p class="contenido-comentario"><?php echo nl2br(htmlspecialchars($result["contenido"])); ?></p>
                 </div>
                 <?php
             }
 
             ?>
         </section>
-        <div id="insertar-comentario">
-            <textarea cols="10" rows="10"></textarea>
-            <button>Agregar Comentario</button>
+        <div id="insertar-comentario" class="comentario-formulario">
+            <textarea placeholder="Escribe tu comentario..." cols="30" rows="5"></textarea>
+            <button type="button">Agregar Comentario</button>
         </div>
     </main>
 

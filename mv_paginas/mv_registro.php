@@ -43,13 +43,13 @@ session_start();
             <h1>Registrarse</h1>
             <div class="campo">
                 <label for="username">Nombre de Usuario</label>
-                <input type="text" placeholder="Nombre de Usuario" name="username" />
+                <input type="text" id="username" name="username" placeholder="Nombre de Usuario" required />
             </div>
             <div class="campo">
                 <label for="username">Contraseña</label>
-                <input type="password" placeholder="......" name="password" />
+                <input type="password" id="password" name="password" placeholder="******" required />
             </div>
-            <input type="submit" value="Registrarse" class="boton-sesion" />
+            <button type="submit" class="boton-sesion">Registrarse</button>
         </form>
     </main>
 </body>

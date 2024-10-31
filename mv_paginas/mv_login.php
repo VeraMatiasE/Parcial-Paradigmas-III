@@ -45,13 +45,13 @@ session_start();
             <h1>Iniciar Sesión</h1>
             <div class="campo">
                 <label for="username">Nombre de Usuario</label>
-                <input type="text" placeholder="Nombre de Usuario" name="username" />
+                <input type="text" id="username" name="username" placeholder="Nombre de Usuario" required />
             </div>
             <div class="campo">
-                <label for="username">Contraseña</label>
-                <input type="password" placeholder="......" name="password" />
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="******" required />
             </div>
-            <input type="submit" value="Ingresar" class="boton-sesion" />
+            <button type="submit" class="boton-sesion">Ingresar</button>
         </form>
     </main>
 </body>

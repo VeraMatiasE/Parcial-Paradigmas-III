@@ -30,9 +30,9 @@ session_start();
                 ?>
                 <div class="publicacion">
                     <a href="mv_paginas/mv_publicacion.php?id=<?php echo $result["id_post"] ?>">
-                        <h3>Mi experiencia con php</h3>
-                        <p>30/10/2024</p>
-                        <p>Este es un blog</p>
+                        <h3><?php echo htmlspecialchars($result["titulo"]) ?></h3>
+                        <p><?php echo htmlspecialchars($result["fecha"]) ?></p>
+                        <p><?php echo htmlspecialchars($result["descripcion"]) ?></p>
                     </a>
                 </div>
                 <?php
