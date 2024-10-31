@@ -66,6 +66,7 @@ h2 {
 .lista-publicaciones {
   max-width: 80%;
   width: -webkit-fill-available;
+  width: -moz-available;
   margin: 20px auto;
   padding: 20px;
   background-color: white;
@@ -184,172 +185,111 @@ h2 {
   background-color: #505cbf;
 }
 
-/*
-.contenido-publicacion .propiedades {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  color: #888;
-  font-size: 0.9rem;
+.contenido-publicacion {
+  max-width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #f9f9fb;
+  box-shadow: 0 4px 8px var(--shadow-color);
 }
 
-.contenido-publicacion {
-  max-width: 90%;
-  padding: 20px;
-  border-bottom: 1px solid var(--border-color);
+.contenido-publicacion h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.propiedades {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 20px;
 }
 
 .lista-comentarios {
   max-width: 70%;
+  margin: 20px auto;
   padding: 20px;
-  margin-top: 20px;
-  width: -webkit-fill-available;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px var(--shadow-color);
+  border-top: 2px solid var(--accent-color);
+}
+
+.comentario {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
 }
 
 .datos-comentario {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  color: #999;
-  font-size: 0.9rem;
-}
-
-#insertar-comentario {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  padding: 20px;
-  background-color: white;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 8px var(--shadow-color);
-}
-
-#insertar-comentario input,
-#insertar-comentario textarea {
-  border: 1px solid var(--border-color);
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-#insertar-comentario button {
-  width: 100%;
-  background-color: var(--accent-color);
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-#insertar-comentario button:hover {
-  background-color: var(--hover-color);
-}
-*/
-.contenido-publicacion {
-    max-width: 70%;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    background-color: #f9f9fb;
-    box-shadow: 0 4px 8px var(--shadow-color);
-}
-
-.contenido-publicacion h1 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.propiedades {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    color: gray;
-    margin-bottom: 20px;
-}
-
-.lista-comentarios {
-    max-width: 70%;
-    margin: 20px auto;
-    padding: 20px;
-    border-top: 2px solid var(--accent-color);
-}
-
-.comentario {
-    margin-top: 15px;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #ffffff;
-}
-
-.datos-comentario {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    color: gray;
+  font-size: 0.85rem;
+  color: gray;
 }
 
 .usuario {
-    font-weight: bold;
-    color: #555;
+  font-weight: bold;
+  color: #555;
 }
 
 .fecha-comentario {
-    font-style: italic;
+  font-style: italic;
 }
 
 .contenido-comentario {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: var(--text-color);
+  margin-top: 8px;
+  font-size: 1rem;
+  color: var(--text-color);
+  overflow: clip;
 }
 
 .comentario-formulario {
-    max-width: 70%;
-    margin: 20px auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  max-width: 70%;
+  margin: 20px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comentario-formulario #contador {
+  font-size: 0.8rem;
+  margin: 0;
+  text-align: end;
 }
 
 .comentario-formulario textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    resize: vertical;
-    transition: border-color 0.3s ease;
-    resize: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  resize: none;
 }
 
 .comentario-formulario textarea:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 5px var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color);
 }
 
 .comentario-formulario button {
-    width: fit-content;
-    padding: 10px 20px;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    align-self: flex-end;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: flex-end;
 }
 
 .comentario-formulario button:hover {
-    background-color: var(--hover-color);
+  background-color: var(--hover-color);
 }

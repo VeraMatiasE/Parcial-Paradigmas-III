@@ -28,9 +28,9 @@ session_start();
             $clave = $_POST["password"];
 
             if (password_verify($clave, $result["password"])) {
-                //$_SESSION["username"] = $usuario;
-                //header("Location: /mv_index.php");
-                //exit();
+                $_SESSION["username"] = $usuario;
+                header("Location: /mv_index.php");
+                exit();
     
             } else {
                 echo "<script>alert('Credenciales Incorrectas')</script>";

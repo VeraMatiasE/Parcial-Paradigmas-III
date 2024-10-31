@@ -70,10 +70,14 @@ session_start();
 
             ?>
         </section>
-        <div id="insertar-comentario" class="comentario-formulario">
-            <textarea placeholder="Escribe tu comentario..." cols="30" rows="5"></textarea>
-            <button type="button">Agregar Comentario</button>
-        </div>
+        <section>
+            <h4>Agregar Comentario</h4>
+            <div id="insertar-comentario" class="comentario-formulario">
+                <p id="contador">500</p>
+                <textarea placeholder="Escribe tu comentario..." cols="30" rows="5" maxlength="500"></textarea>
+                <button type="button">Agregar Comentario</button>
+            </div>
+        </section>
     </main>
 
 </body>
