@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS comentarios (
     id_usuario INT DEFAULT NULL,
     id_post INT,
     contenido TEXT,
-    fecha DATE,
+    fecha DATE DEFAULT(CURDATE()),
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
     FOREIGN KEY (id_post) REFERENCES posts(id_post)
 );
