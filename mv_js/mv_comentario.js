@@ -19,9 +19,24 @@ async () => {
         await fetch("http://localhost/mv_paginas/mv_agregar_comentario.php?id_post=" + id , {
             method: "POST",
             body: formData
-          }).then(resultado => {
-            if(resultado.status == 200) {
-                location.reload()
+          }).then(async resultado => {
+            if (resultado.status == 200) {
+                let result = await resultado.json();
+
+                let nuevo_comentario_html = `
+                    <hr>
+                    <div class="comentario">
+                        <div class="datos-comentario">
+                            <p>Usuario: ${result.nombre_usuario ? result.nombre_usuario : "Anónimo"}</p>
+                            <p>Fecha: ${result.fecha}</p>
+                        </div>
+                        <p>${result.contenido}</p>
+                    </div>
+                `;
+
+                $(".lista-comentarios").append(nuevo_comentario_html);
+                
+                textarea_comentario.val('');
             }
           });
     }
