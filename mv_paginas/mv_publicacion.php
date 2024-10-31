@@ -41,7 +41,7 @@ session_start();
             <h3>Comentarios</h3>
             <?php
 
-            $sql = "SELECT contenido, fecha, u.username FROM comentarios AS c
+            $sql = "SELECT contenido, c.fecha, u.username FROM comentarios AS c
                 LEFT JOIN usuarios AS u ON u.id_usuario = c.id_usuario
                 WHERE id_post = :id";
             $id = $_GET["id"];
@@ -61,6 +61,7 @@ session_start();
                         <p>Usuario
                             <?php echo !isset($result["username"]) ? "Anónimo" : htmlspecialchars($result["username"]) ?>
                         </p>
+                        <?php echo $result["fecha"]; ?>
                         <p>Fecha <?php echo htmlspecialchars($result["fecha"]) ?></p>
                     </div>
                     <p><?php echo htmlspecialchars($result["contenido"]) ?></p>
@@ -70,11 +71,11 @@ session_start();
             }
 
             ?>
-            <div id="insertar-comentario">
-                <textarea cols="10" rows="10"></textarea>
-                <button>Agregar Comentario</button>
-            </div>
         </section>
+        <div id="insertar-comentario">
+            <textarea cols="10" rows="10"></textarea>
+            <button>Agregar Comentario</button>
+        </div>
     </main>
 
 </body>
